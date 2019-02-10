@@ -1,0 +1,71 @@
+?xml version="1.0"?>
+<Container version="1">
+  <Name>Floatplane-Downloader</Name>
+  <Repository>cybersardinha/floatplane-downloader</Repository>
+  <Registry>https://hub.docker.com/r/cybersardinha/floatplane-downloader/~/dockerfile/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Privileged>false</Privileged>
+  <Project/>
+  <Overview>Floatplane-Downloader</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+ <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Floatplane-Downloader</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/opt/appdata/floatplane/config/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/opt/appdata/floatplane/app/</HostDir>
+      <ContainerDir>/floatplane</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/Floatplane/</HostDir>
+      <ContainerDir>/media/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>    
+  </Data>
+  <Environment>
+    <Variable>
+      <Name>USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Name>PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Media" Target="/media/floatplane/" Default="" Mode="rw" Description="Media path to download to" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="USERNAME" Target="USERNAME" Default="" Mode="" Description="Container Variable: USERNAME" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PASSWORD" Target="PASSWORD" Default="" Mode="" Description="Container Variable: PASSWORD" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="CONFIG_PATH" Target="/config" Default="" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/opt/appdata/floatplane/config/</Config>
+  <Config Name="APP_PATH" Target="/app" Default="" Mode="rw" Description="App Path" Type="Path" Display="always" Required="false" Mask="false">/opt/appdata/floatplane/app/</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
